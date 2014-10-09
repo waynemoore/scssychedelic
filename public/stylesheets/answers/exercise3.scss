@@ -1,0 +1,21 @@
+$size: 50px;
+$color: orange;
+
+@mixin shape($shape) {
+  @if $shape == square {
+    width: $size;
+    height: $size;
+    background: $color;
+  }
+  
+  @if $shape == circle {
+    width: $size;
+    height: $size;
+    border-radius: $size / 2;
+    background: $color;
+  }
+}
+
+.chip {
+  @include shape(square);
+}

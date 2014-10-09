@@ -1,0 +1,36 @@
+// Add or remove the trailing slash (/) in the first group of comments
+// to toggle between code options.
+// The first set is for clarity and the second is a suggested refactor.
+
+.triangle-ra1 {
+  width: 0;
+  height: 0;
+  /**/
+  border-width: 30px;
+  border-style: solid;
+  border-top-color: orange;
+  border-right-color: orange;
+  border-bottom-color: darkgrey;
+  border-left-color: grey;
+  /*/
+  border-width: 80px solid orange;
+  border-bottom-color: transparent;
+  border-left-color: transparent
+  /**/
+}
+
+.triangle-ra2 {
+  width: 0;
+  height: 0;
+  /**/
+  border: 30px solid transparent;
+  border-right: 0;
+  border-top-color: orange;
+  border-left-color: grey;
+  border-bottom-color: darkgrey;
+  /*/
+  border: 30px solid transparent;
+  border-right: 0;
+  border-top-color: orange;
+  /**/
+}

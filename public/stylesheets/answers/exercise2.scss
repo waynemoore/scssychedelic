@@ -1,0 +1,22 @@
+.equilateral {
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;
+  border-bottom-width: 30px * 1.5;
+  border-bottom-color: orange;
+}
+
+.isosceles {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px * 3 solid orange;
+}
+
+.scalene {
+  width: 0;
+  height: 0;
+  border-bottom: 30px * 2 solid orange;
+  border-right: 30px solid transparent;
+}
