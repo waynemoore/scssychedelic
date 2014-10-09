@@ -18,4 +18,6 @@ $color: orange;
 
 .chip {
   @include shape(square);
+  transform: rotate(15deg);
+  transform-origin: top left;
 }

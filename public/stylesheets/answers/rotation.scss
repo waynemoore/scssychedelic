@@ -1,0 +1,15 @@
+@mixin rotate($value) {
+  -moz-transform: rotate($value);
+  -webkit-transform: rotate($value);
+  -ms-transform: rotate($value);
+  -o-transform: rotate($value);
+  transform: rotate($value);
+}
+
+@mixin origin($value1, $value2) {
+  -moz-transform-origin: $value1 $value2;
+  -webkit-transform-origin: $value1 $value2;
+  -ms-transform-origin: $value1 $value2;
+  -o-transform-origin: $value1 $value2;
+  transform-origin: $value1 $value2;
+}

@@ -1,4 +1,4 @@
-$size: 50px;
+$size: 30px;
 $color: orange;
 
 @mixin shape($shape) {
@@ -18,6 +18,20 @@ $color: orange;
   }
 }
 
-.chip {
+#spirograph {
+  // width: $size;
+  // margin: 0 auto;
+}
+
+[class^="chip"] {
+  // position: absolute;
   @include shape(square);
+  @include origin(top, left);
+  // opacity: .5;
+}
+
+@for $i from 1 through 15 {
+  .chip#{$i} {
+    @include rotate(360deg / 15 * ($i - 1));
+  }
 }
