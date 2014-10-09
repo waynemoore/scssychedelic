@@ -9,6 +9,33 @@
   %head
     %meta{charset: 'utf-8'}
     %link{:rel => 'stylesheet', :type => 'text/css', :href => '/app.css'}
+    %script{:src => 'https://code.jquery.com/jquery-2.1.1.min.js'}
+    :javascript
+      function foo($el) {
+        var borders = ['top', 'right', 'bottom', 'left'];
+        var colours = ['red', 'yellow', 'orange', 'green', 'blue', 'black', 'purple', 'grey'];
+
+        var border = borders[parseInt(Math.random() * borders.length)];
+        var colour = colours[parseInt(Math.random() * colours.length)];
+
+        $($el).css('border-' + border + '-color', colour);
+        $($el).css('border-' + border + '-width', Math.random() * 200);
+        $($el).css('border-radius', parseInt(Math.random() * 40) + '%');
+        $($el).css('margin-left', parseInt(Math.random() * 800) + 'px');
+        $($el).css('transform', 'rotate(' + parseInt(Math.random() * 360) + 'deg)');
+      }
+
+      function bar() {
+        var triangles = $('.triangle');
+        foo($(triangles[parseInt(Math.random() * triangles.length)]))
+      }
+
+      function go() {
+        setInterval(bar, 60);
+      }
+
+      setTimeout(go, 1000);
+
     %title Sass Demo Boilerplate
 
   %body
